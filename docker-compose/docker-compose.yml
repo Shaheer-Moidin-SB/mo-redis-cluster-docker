@@ -30,7 +30,7 @@ services:
     ports:
       - 7003:6379
     volumes:
-      - ../redis-cluster/data:/data
+      - ../redis-cluster/node-4/data:/data
     command: redis-server --port 6379 --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --appendonly yes
 
   redis-node-5:
@@ -38,7 +38,7 @@ services:
     ports:
       - 7004:6379
     volumes:
-      - ../redis-cluster/data:/data
+      - ../redis-cluster/node-5/data:/data
     command: redis-server --port 6379 --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --appendonly yes
 
   redis-node-6:
@@ -46,7 +46,7 @@ services:
     ports:
       - 7005:6379
     volumes:
-      - ../redis-cluster/data:/data
+      - ../redis-cluster/node-6/data:/data
     command: redis-server --port 6379 --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000 --appendonly yes
 
   redis-setup:
