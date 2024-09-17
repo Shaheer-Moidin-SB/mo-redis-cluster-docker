@@ -64,4 +64,5 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 # node-6/
 dump.rdb
 nodes.conf
+/redis-cluster
 
